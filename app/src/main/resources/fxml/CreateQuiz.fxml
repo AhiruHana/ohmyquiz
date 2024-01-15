@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <stylesheets>
-        <URL value="@createquiz.css" />
-    </stylesheets>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ohmyquiz.controllers.CreateQuizController">
    <children>
-      <TableView layoutX="300.0" layoutY="64.0" prefHeight="276.0" prefWidth="299.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="64.0">
-        <columns>
-          <TableColumn prefWidth="34.39996337890625" text="ID" />
-          <TableColumn prefWidth="260.79998779296875" text="Answer" />
-        </columns>
-      </TableView>
-      <Button layoutX="310.0" layoutY="355.0" mnemonicParsing="false" text="Add Question" />
-      <TableView layoutY="64.0" prefHeight="335.0" prefWidth="299.0" style="-fx-border-color: black;">
-         <columns>
-            <TableColumn prefWidth="75.0" text="ID" />
-            <TableColumn prefWidth="221.6000244140625" text="Question" />
-         </columns>
-      </TableView>
-      <Button layoutX="532.0" layoutY="355.0" mnemonicParsing="false" text="Back" />
-      <Text layoutX="205.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE QUIZ">
+      <ToolBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="800.0">
+        <items>
+          <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="37.0" prefWidth="70.0" text="Back">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create Quiz" textAlignment="CENTER" wrappingWidth="656.13671875">
+               <font>
+                  <Font size="30.0" />
+               </font></Text>
+        </items>
+      </ToolBar>
+      <TextField fx:id="titleField" alignment="TOP_LEFT" blendMode="SRC_ATOP" cacheShape="false" layoutX="32.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="150.0" promptText="Name" stylesheets="@../css/TextField.css">
          <font>
-            <Font size="32.0" />
+            <Font size="13.0" />
          </font>
-      </Text>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <Blend />
+         </effect>
+      </TextField>
+      <ChoiceBox fx:id="statusComboBox" layoutX="32.0" layoutY="133.0" prefWidth="150.0" />
+      <TextArea fx:id="descriptionField" layoutX="32.0" layoutY="177.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="150.0" promptText="Write infomation about the game" wrapText="true" />
+      <Button layoutX="28.0" layoutY="293.0" mnemonicParsing="false" onAction="#createQuizButtonAction" text="Create OWQ!">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Text layoutX="84.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="quiz" />
+      <Button fx:id="SectionTitleForm" onAction="#openSectionTitleForm" layoutX="250.0" layoutY="133.0" mnemonicParsing="false" text="Create sec" />
+      <Button onAction="#addQuestionButtonAction" layoutX="301.0" layoutY="494.0" mnemonicParsing="false" text=" create qie" />
+      <Button onAction="#addAnswerButtonAction" layoutX="608.0" layoutY="494.0" mnemonicParsing="false" text="create ans" />
+      <TextField fx:id="contentQuestionField" layoutX="279.0" layoutY="377.0" promptText="que" />
+      <TextField fx:id="answerContentField" layoutX="494.0" layoutY="339.0" promptText="answer" />
    </children>
 </AnchorPane>
