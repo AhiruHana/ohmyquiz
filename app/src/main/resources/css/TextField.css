@@ -1,0 +1,12 @@
+.text-field {
+    -fx-background-color: #ffffff, rgb(135, 211, 255), rgb(255, 255, 255);
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.text-field:focused {
+    -fx-background-color: #c0edff00, rgb(0, 255, 13), rgb(255, 255, 255);
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.text-field:hover {
+    -fx-background-color: #69e1ff00, rgb(133, 247, 255), white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1   
+}

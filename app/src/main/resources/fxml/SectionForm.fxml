@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ohmyquiz.controllers.CreateQuizController">
+   <children>
+      <Button onAction="#addSectionButtonAction" layoutX="433.0" layoutY="323.0" mnemonicParsing="false" text="save" />
+      <Text layoutX="161.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <TextField fx:id="titleSectionField" layoutX="236.0" layoutY="210.0" promptText="secccccccccccccccc" />
+   </children>
+</AnchorPane>
