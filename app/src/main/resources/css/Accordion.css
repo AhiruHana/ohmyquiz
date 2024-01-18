@@ -1,0 +1,21 @@
+.accordion .titled-pane .title {
+    -fx-background-color: rgb(252, 222, 255);
+
+}
+.accordion.titled-pane{
+    -fx-padding: 2em 0em 0em 0em;
+
+}
+
+.accordion .titled-pane{
+    -fx-border-color: #b6b5b6;
+    
+}
+.accordion .titled-pane>*.content {
+    -fx-background-color: transparent;
+
+}
+
+.accordion .titled-pane>.title>.arrow-button>.arrow {
+    -fx-background-color:  #7F3CB2;
+}
