@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -50,9 +51,19 @@
                               <Insets bottom="60.0" left="85.0" right="85.0" top="40.0" />
                            </VBox.margin>
                            <children>
+                              <HBox alignment="CENTER_LEFT" prefWidth="200.0">
+                                 <children>
+                                    <Label prefHeight="61.0" style="-fx-font-size: 14px;" text="Topic">
+                                       <padding>
+                                          <Insets bottom="15.0" left="25.0" right="25.0" top="15.0" />
+                                       </padding>
+                                    </Label>
+                                    <ComboBox fx:id="topicComboBox" prefWidth="150.0" />
+                                 </children>
+                              </HBox>
                               <Label prefHeight="17.0" prefWidth="429.0" style="-fx-font-size: 14px;" text="Scoring Scheme">
                                  <padding>
-                                    <Insets bottom="15.0" left="25.0" right="25.0" top="25.0" />
+                                    <Insets bottom="15.0" left="25.0" right="25.0" />
                                  </padding>
                               </Label>
                               <GridPane alignment="CENTER" maxHeight="215.0" maxWidth="600.0" minWidth="-Infinity" prefHeight="215.0" prefWidth="600.0" style="-fx-border-radius: 10px;">
